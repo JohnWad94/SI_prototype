@@ -15,10 +15,10 @@ float sqColor2; // Variable to store background color
 float sqColor3; // Variable to store background color
 
 void setup() {
-  size(500, 500);
+  size(1290, 960);
   sqColor1 = 0; // Initial background color
   
-  portName = Serial.list()[1]; // Adjust the index based on your setup
+  portName = Serial.list()[4]; // Adjust the index based on your setup
   mySerial = new Serial(this, portName, 9600);
 }
 
