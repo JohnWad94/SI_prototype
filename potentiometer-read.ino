@@ -1,17 +1,13 @@
-// Analog Read with Serial Monitor
+const int potentiometerPin = A0; 
+int potentiometerValue; 
 
-void setup() {
-  // The setup routine runs once when you press reset
+void setup() { 
+  Serial.begin(9600); 
+  } 
 
-  Serial.begin(9600); //Initialize serial communication at 9600 bits per second
-}
 
-void loop() {
-  // The loop routine runs over and over again forever
-
-  int sensorValue = analogRead(A0); //Read input from analog pin 0
-
-  Serial.print(sensorValue); // Prints the value from analog pin 0 
-
-  delay(200); // Delay inbetween for stability 
-}
+void loop() { 
+  potentiometerValue = analogRead(potentiometerPin); 
+  Serial.println(potentiometerValue); 
+  delay(300); 
+  }
